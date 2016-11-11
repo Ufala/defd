@@ -10,7 +10,7 @@ function clicked()
 {
 $.ajax{
 type: 'get',
-url: '/another_page',
+url: 'another_page',
 data: {
 }
 succes: set_page,
@@ -19,5 +19,6 @@ dataType: 'html'
 }
 function set_page(result) {
 $('#panel').html(result);
+       
 }
 </script>
