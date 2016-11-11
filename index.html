@@ -7,18 +7,20 @@
 window.unload = function() {
 $("#load").click(clicked);
 }
-function clicked()
-{
-$.ajax({
-type: 'get',
-url: '/defd/another_page',
-data: {
-}
-succes: set_page,
-dataType: 'html'
-});
-}
+
 function set_page(result) {
 $('#panel').html(result);
+}
+  
+function clicked()
+{
+  $.ajax({
+  type: 'get',
+  url: '/defd/another_page',
+  data: {
+  }
+  succes: set_page,
+  dataType: 'html'
+  });
 }
 </script>
