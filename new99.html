@@ -1,0 +1,18 @@
+<html>
+<script src=""https://vk.com/js/api/openapi.js?136"  type="text/javascript"></script>
+<script type="text/javascript">
+VK.init({
+apiId: 5746046
+});
+</script>
+<script>
+$("#get_photo").click(function () {
+VK.api("users.get", { user_ids: [vk_user_id], fields: "photo_200" }, function (data) {
+console.log(data);
+$("#vk_avatar").attr("src", data.response[0].photo_200);
+});
+);
+</script>
+<img id="vk_avatar">
+<button id="#get_photo">Кнопка</button>
+</html>
